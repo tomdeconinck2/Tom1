@@ -1,0 +1,14 @@
+spring.application.name=gateway-service
+server.port=8079
+eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka/
+#eureka.client.serviceUrl.defaultZone=localhost:8761
+
+zuul.routes.ms1.path=/ms1/**
+zuul.routes.ms1.serviceId=ms1
+
+zuul.routes.ms2.path=/ms2/**
+zuul.routes.ms2.serviceId=ms2
+
+zuul.routes.ms3.path=/ms3/**
+zuul.routes.ms3.serviceId=ms3
+

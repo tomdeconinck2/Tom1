@@ -1,0 +1,19 @@
+package com.example.demo.sub;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CustomerController {
+    private List<Customer> customers = Arrays.asList(
+            new Customer(1, "Joe Bloggs"),
+            new Customer(2, "Jane Doe"));
+
+    private OrderClient orderClient;
+
+    public CustomerController(OrderClient orderClient) {
+        this.orderClient = orderClient;
+    }
+}
